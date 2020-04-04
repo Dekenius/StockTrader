@@ -1,6 +1,14 @@
+# from googlefinance import getQuotes
+import json
+
 class Market:
+
+    # https://stackoverflow.com/questions/16125229/last-key-in-python-dictionary
+    
     def __init__(self):
         # open files for stocks and sets them up
+        answer = input("Do you want to update")
+
 
         raise NotImplementedError
 
@@ -18,4 +26,6 @@ class Market:
         # or, answer,
         raise NotImplementedError
 
+    def get_data(self):
 
+        print(json.dumps(getQuotes('AAPL'), indent=2))
